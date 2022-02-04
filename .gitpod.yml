@@ -5,6 +5,7 @@ tasks:
   - name: Setup Drupal Dev Env
     init: |
       docker build -t devwithlando/php:8.0-apache-4 .
+      docker build -t devwithlando/phpmyadmin:5.1.1 .
       lando start
       lando composer require drush/drush
       lando composer install
