@@ -11,7 +11,7 @@ tasks:
       lando drush si -y --account-pass=admin --site-name='lando_drupal9' --db-url=mysql://drupal9:drupal9@database/drupal9 demo_umami
     command: |
       # start a rebuild  with actual networking service (prebuild uses different)
-      lando rebuild
+      lando rebuild -y
       gp preview $(gp url $(lando info --format=json | jq -r ".[0].urls[0]" | sed -e 's#http://localhost:\(\)#\1#'))
 ports:
   - port: 3306
