@@ -1,5 +1,7 @@
 name: lando-d9
 recipe: drupal9
+compose:
+  - docker-compose.network-mtu.yml
 config:
   webroot: .
 
