@@ -4,10 +4,12 @@ compose:
   - docker-compose.network-mtu.yml
 config:
   webroot: .
-
 services:
   appserver:
     ssl: false
+    build:
+      - composer install --quiet
+
   phpmyadmin:
     type: phpmyadmin
     hosts:
