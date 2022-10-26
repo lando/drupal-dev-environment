@@ -7,9 +7,6 @@ config:
 services:
   appserver:
     ssl: false
-    build:
-      - composer install --quiet
-
   phpmyadmin:
     type: phpmyadmin
     hosts:
