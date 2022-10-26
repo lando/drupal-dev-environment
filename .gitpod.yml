@@ -27,7 +27,7 @@ ports:
 github:
   prebuilds:
     master: true
-    branches: false
+    branches: true
     pullRequests: true
     pullRequestsFromForks: true
     addCheck: true
